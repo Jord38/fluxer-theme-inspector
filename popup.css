@@ -1,0 +1,130 @@
+/* Fluxer Theme Inspector — Popup Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  background: #2b2d31;
+  color: #f2f3f5;
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  background: #1e1f22;
+  color: #7c3aed;
+}
+
+.header-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #f2f3f5;
+}
+
+.section {
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  transition: background-color 150ms, opacity 150ms;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #7c3aed;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #6d28d9;
+}
+
+.btn-secondary {
+  background: #4e5058;
+  color: #fff;
+  flex: 1;
+}
+.btn-secondary:hover {
+  background: #6d6f78;
+}
+
+.btn-danger {
+  background: #4e5058;
+  color: #ed4245;
+  flex: 1;
+}
+.btn-danger:hover {
+  background: #6d6f78;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-row {
+  display: flex;
+  gap: 6px;
+}
+
+/* Status */
+.status {
+  font-size: 0.6875rem;
+  color: #949ba4;
+  min-height: 16px;
+  text-align: center;
+}
+
+.status.success {
+  color: #57f287;
+}
+
+.status.error {
+  color: #ed4245;
+}
+
+/* Footer */
+.footer {
+  padding: 8px 14px;
+  text-align: center;
+  font-size: 0.6875rem;
+  color: #949ba4;
+  background: #1e1f22;
+}
+
+.shortcut {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.06);
+  font-family: "SF Mono", "Fira Code", Consolas, monospace;
+  font-size: 0.625rem;
+  color: #b5bac1;
+}

@@ -1,0 +1,329 @@
+/* Fluxer Theme Inspector — content styles */
+
+.__ti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2147483647;
+  width: 320px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: var(--background-secondary, #2b2d31);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 2px 8px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  user-select: none;
+  touch-action: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--text-primary, #f2f3f5);
+}
+
+.__ti-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background-color: var(--background-tertiary, #1e1f22);
+  cursor: grab;
+  flex-shrink: 0;
+}
+.__ti-header:active {
+  cursor: grabbing;
+}
+
+.__ti-header-icon {
+  color: var(--brand-primary, #7c3aed);
+  flex-shrink: 0;
+  display: flex;
+}
+
+.__ti-header-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--text-primary, #f2f3f5);
+  flex: 1;
+  line-height: 1.2;
+}
+
+.__ti-header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: var(--text-secondary, #b5bac1);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background-color 150ms, color 150ms;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.__ti-header-btn:hover {
+  background-color: var(--background-modifier-hover, rgba(255, 255, 255, 0.06));
+  color: var(--text-primary, #f2f3f5);
+}
+
+.__ti-header-btn-active {
+  background-color: var(--brand-primary, #7c3aed) !important;
+  color: var(--text-on-brand-primary, #fff) !important;
+}
+.__ti-header-btn-active:hover {
+  opacity: 0.9;
+}
+
+.__ti-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.__ti-body::-webkit-scrollbar {
+  width: 6px;
+}
+.__ti-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.__ti-body::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.__ti-hint {
+  font-size: 0.75rem;
+  color: var(--text-tertiary, #949ba4);
+  line-height: 1.4;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.__ti-variable-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.__ti-variable-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 100ms;
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  color: var(--text-primary, #f2f3f5);
+  font-family: inherit;
+}
+.__ti-variable-item:hover {
+  background-color: var(--background-modifier-hover, rgba(255, 255, 255, 0.06));
+}
+
+.__ti-swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  flex-shrink: 0;
+}
+
+.__ti-variable-name {
+  font-size: 0.75rem;
+  font-family: var(--font-mono, "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace);
+  color: var(--text-secondary, #b5bac1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.__ti-selected-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.__ti-selected-header {
+  font-size: 0.75rem;
+  font-family: var(--font-mono, "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace);
+  color: var(--text-primary, #f2f3f5);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.__ti-color-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.__ti-color-preview {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 2px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  flex-shrink: 0;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.__ti-color-native {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+}
+
+.__ti-color-text {
+  flex: 1;
+  background: var(--background-tertiary, #1e1f22);
+  color: var(--text-primary, #f2f3f5);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  border-radius: 6px;
+  padding: 6px 8px;
+  font-size: 0.8125rem;
+  font-family: var(--font-mono, "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace);
+  outline: none;
+}
+.__ti-color-text:focus {
+  border-color: var(--brand-primary, #7c3aed);
+}
+
+.__ti-action-buttons {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.__ti-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 150ms, color 150ms;
+  border: none;
+  background-color: var(--button-secondary-fill, #4e5058);
+  color: var(--button-secondary-text, #fff);
+}
+.__ti-action-btn:hover {
+  background-color: var(--button-secondary-active-fill, #6d6f78);
+}
+
+/* Hover overlay (element picker) */
+.__ti-hover-overlay {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2147483646;
+  background: rgba(124, 58, 237, 0.08);
+  border: 2px solid rgba(124, 58, 237, 0.6);
+  border-radius: 2px;
+}
+
+.__ti-hover-label {
+  position: fixed;
+  pointer-events: none;
+  z-index: 2147483646;
+  background: rgba(124, 58, 237, 0.9);
+  color: #fff;
+  font-size: 10px;
+  font-family: var(--font-mono, "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace);
+  padding: 1px 6px;
+  border-radius: 2px;
+  white-space: nowrap;
+  max-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+}
+
+/* Element info bar */
+.__ti-element-info {
+  padding: 4px 8px;
+  margin: -10px -12px 0;
+  font-size: 11px;
+  font-family: var(--font-mono, "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace);
+  color: var(--text-secondary, #a1a1aa);
+  background: rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Section labels */
+.__ti-section-label {
+  padding: 2px 0;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary, #949ba4);
+}
+
+.__ti-section-label-toggle {
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  padding: 4px 0 2px;
+}
+.__ti-section-label-toggle::-webkit-details-marker {
+  display: none;
+}
+.__ti-section-label-toggle::before {
+  content: "\25B6";
+  display: inline-block;
+  font-size: 8px;
+  margin-right: 4px;
+  transition: transform 100ms;
+}
+details[open] > .__ti-section-label-toggle::before {
+  transform: rotate(90deg);
+}
+.__ti-section-label-toggle:hover {
+  color: var(--text-primary, #f2f3f5);
+}
+
+.__ti-inherited-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 2px;
+}
+
+/* Injected button in Fluxer settings */
+.__ti-settings-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 150ms;
+  border: none;
+  background-color: var(--brand-primary, #7c3aed);
+  color: var(--text-on-brand-primary, #fff);
+  margin-top: 8px;
+}
+.__ti-settings-btn:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=320">
+  <link rel="stylesheet" href="popup.css">
+  <title>Fluxer Theme Inspector</title>
+</head>
+<body>
+  <div class="popup">
+    <div class="header">
+      <svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M200.77,53.89A103.27,103.27,0,0,0,128,24h-1.07A104,104,0,0,0,24,128c0,43,26.58,79.06,69.36,94.17A32,32,0,0,0,136,192a16,16,0,0,1,16-16h46.21a31.81,31.81,0,0,0,31.2-24.88,104.43,104.43,0,0,0,2.59-24A103.28,103.28,0,0,0,200.77,53.89ZM76,168a12,12,0,1,1,12-12A12,12,0,0,1,76,168Zm0-56a12,12,0,1,1,12-12A12,12,0,0,1,76,112Zm52-44a12,12,0,1,1,12-12A12,12,0,0,1,128,68Zm52,44a12,12,0,1,1,12-12A12,12,0,0,1,180,112Z" opacity="0.2"/><path d="M200.77,53.89A103.27,103.27,0,0,0,128,24h-1.07A104,104,0,0,0,24,128c0,43,26.58,79.06,69.36,94.17A32,32,0,0,0,136,192a16,16,0,0,1,16-16h46.21a31.81,31.81,0,0,0,31.2-24.88,104.43,104.43,0,0,0,2.59-24A103.28,103.28,0,0,0,200.77,53.89ZM213.57,148.55A15.94,15.94,0,0,1,198.21,160H152a32,32,0,0,0-32,32,16,16,0,0,1-21.31,15.07C62.49,194.3,40,164,40,128a88,88,0,0,1,87.09-88h.9a88.35,88.35,0,0,1,88,87.25A89.15,89.15,0,0,1,213.57,148.55ZM140,76a12,12,0,1,1-12-12A12,12,0,0,1,140,76ZM88,100a12,12,0,1,1-12-12A12,12,0,0,1,88,100Zm0,56a12,12,0,1,1-12-12A12,12,0,0,1,88,156Zm104-56a12,12,0,1,1-12-12A12,12,0,0,1,192,100Z"/></svg>
+      <span class="header-title">Theme Inspector</span>
+    </div>
+
+    <div class="section">
+      <button id="toggleBtn" class="btn btn-primary">Open Inspector</button>
+      <div class="btn-row">
+        <button id="copyBtn" class="btn btn-secondary">Copy CSS</button>
+        <button id="resetBtn" class="btn btn-danger">Reset All</button>
+      </div>
+      <div id="status" class="status"></div>
+    </div>
+
+    <div class="footer">
+      <span class="shortcut">Ctrl+Shift+.</span> to toggle
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
